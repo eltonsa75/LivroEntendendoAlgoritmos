@@ -1,3 +1,5 @@
+
+
 class HashTable:
     def __init__(self, size):
         self.size = size
@@ -33,18 +35,22 @@ class HashTable:
         for i, entries in enumerate(self.table):
             print(f"Index {i}: {entries}")
 
-# Adicionando os dados
-hash_table = HashTable(10)
-hash_table.insert("maçã", 0.67)
-hash_table.insert("leite", 1.49)
-hash_table.insert("abacate", 1.49)
+# Criação de um dicionário (tabela hash nativa do Python)
+caderno = {}
+
+# Inserindo dados
+caderno["maçã"] = 0.67
+caderno["leite"] = 1.49
+caderno["abacate"] = 1.49
 
 # Exibindo a tabela hash
-print("Tabela Hash:")
-hash_table.display()
+print("Tabela Hash (dicionário):")
+for chave, valor in caderno.items():
+    print(f"Chave: {chave}, Valor: {valor}")
 
-# Consultando os valores
-print("\nValor associado à chave 'maçã':", hash_table.get("maçã"))
-print("Valor associado à chave 'leite':", hash_table.get("leite"))
-print("Valor associado à chave 'abacate':", hash_table.get("abacate"))
+# Recuperando valores associados às chaves
+print("\nValores recuperados:")
+print(f"Valor associado à chave 'maçã': {caderno['maçã']}")
+print(f"Valor associado à chave 'leite': {caderno['leite']}")
+print(f"Valor associado à chave 'abacate': {caderno['abacate']}")
 
